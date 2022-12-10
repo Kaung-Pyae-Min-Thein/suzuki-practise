@@ -1,0 +1,42 @@
+footer {
+  background-color: #2B2B2B;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr) 2fr 1fr;
+  ul{
+    list-style: none;
+    padding-left: 0;
+    a{
+      &:link{
+        color: #fff;
+        text-decoration: none;
+      }
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  section{
+    h1,h2,p{
+      color: #fff;
+    }
+    h1{
+      font-size: 18px;
+      border-bottom: #fff solid 2px;
+    }
+    h2{
+      font-size: 18px;
+      font-weight: normal;
+    }
+    img{
+      background-color: #fff;
+    }
+    .logo{
+      width: 100px;
+    }
+    .fb,.yt{
+      width: 35px;
+    }
+  }
+}
