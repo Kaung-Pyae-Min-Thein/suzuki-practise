@@ -8,6 +8,7 @@ import { TestingComponent } from './components/testing/testing.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InfoComponent } from './components/info/info.component';
 import { ButtonComponent } from './components/button/button.component';
+import { DealerInfoComponent } from './components/dealer-info/dealer-info.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ButtonComponent } from './components/button/button.component';
     TestingComponent,
     FooterComponent,
     InfoComponent,
-    ButtonComponent
+    ButtonComponent,
+    DealerInfoComponent
   ],
   imports: [
     BrowserModule,

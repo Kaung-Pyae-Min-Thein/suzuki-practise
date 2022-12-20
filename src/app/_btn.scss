@@ -1,0 +1,98 @@
+.btn{
+  background-color: transparent;
+  color: #000;
+  border-radius: 5px;
+  border: solid 2px #000;
+  position: relative;
+  height: 55px;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  .content,.icon{
+    position: absolute;
+    transition: .3s;
+  }
+
+  .content{
+    font-size: 18px;
+  }
+
+  .icon{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(80%);
+  }
+
+  &:hover{
+    .content{
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-80%);
+    }
+    .icon{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &-outline{
+    &--black{
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+
+  &-solid{
+    &--black,&--white{
+      border: 0;
+    }
+    &--black{
+     background-color: #000;
+     color: #fff;
+    }
+    &--white{
+      background-color: #fff;
+      color: #000;
+    }
+  }
+  &.fade-up{
+      &.black{
+        span{
+          position: relative;
+        }
+        &::before{
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: -100%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(6, 3, 3);
+          transition: .3s;
+          box-sizing: border-box;
+        }
+        &:hover{
+          color: #fff;
+          &::before{
+            top: 0;
+          }
+        }
+      }
+      &--white{
+        &:hover{
+          color: #000;
+        }
+      }
+      
+  }
+  &.fade-in{
+
+  }
+}

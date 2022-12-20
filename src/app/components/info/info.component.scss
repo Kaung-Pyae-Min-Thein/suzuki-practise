@@ -1,67 +1,57 @@
-article{
-  display: flex;
-  height: 100vh;
+// .info{
+//   display: flex;
+//   height: 100vh;
+  
+//   .img-info{
+//     position: relative;
+//     img{
+//       height: 100%;
+//     }
+//     &::after{
+//       content: "";
+//       width: 200px;
+//       height: 100%;
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       background-image: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+//     }
+//   }
 
-  // .textbox, img{
-  //   width: 50%;
-  // }
-  .img-info{
-    
-    position: relative;
-    img{
-      height: 100%;
-    }
-    &::after{
-      content: "";
-      width: 200px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-image: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
-    }
-  }
+//   .textbox{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     justify-content: center;
+//     padding-right: 100px;
+//     padding-left: 50px;
+//     background-color: rgb(0, 0, 0);
+//     color: rgb(255, 255, 255);  
+//     h1{
+//       font-size: 65px;
+//       margin-top: 0;
+//       margin-bottom: 25px;
+//     }
+//     p{
+//       margin-top: 0;
+//       margin-bottom: 45px;
+//     }
+//   }
+//   &.white{
+//     flex-direction: row-reverse;
+//     .img-info{
+//       &::after{
+//       top: 0;
+//       left: 0;
+//       background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+//       }
+//     }
 
-  .textbox{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-right: 100px;
-    padding-left: 50px;
-    h1{
-      font-size: 65px;
-      margin-top: 0;
-      margin-bottom: 25px;
-    }
-    p{
-      margin-top: 0;
-      margin-bottom: 45px;
-    }
-    button{
-      .plus{
-        font-size: 40px;
-        
-        position: absolute;
-        
-      }
-      .learn{
-        position: absolute;
-
-      }
-      
-    }
-    &.black{
-      background-color: rgb(0, 0, 0);
-      color: rgb(255, 255, 255);  
-      button{
-        color: white;
-        border-color: white;
-      }
-    }
-    &.white{
-      background-color: rgb(255, 255, 255);
-      color: rgb(0, 0, 0);
-    }
-  }
-}
+//     .textbox{
+//       padding-left: 100px;
+//       padding-right: 85px;
+//       background-color: rgb(255, 255, 255);
+//       color: rgb(0, 0, 0);
+//     }
+//   }
+// }
