@@ -3,7 +3,23 @@
 
 body{
   font-family: 'Roboto Flex', sans-serif;
-  font-size: 18px;
+  // font-size: 18px;
+  font-size: clamp(18px, 1vw ,20px);
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.pc{
+  display: block !important;
+  @media screen and (max-width: 991px) {
+    display: none !important;
+  }
+}
+.mb{
+  display: none !important;
+  @media screen and (min-width: 991px) {
+    display: block !important;
+  }
 }

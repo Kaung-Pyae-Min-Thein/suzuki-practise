@@ -1,0 +1,117 @@
+.btn{
+  background-color: transparent;
+  color: #000;
+  border: solid 2px #000;
+  border-radius: 5px;
+  position: relative;
+  height: 55px;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  // box-sizing: border-box;
+  font-size: 18px;
+
+  .content,.icon{
+    position: absolute;
+    transition: .3s;
+  }
+
+  .icon{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(80%);
+    width: 32px;
+    img{
+      max-width: 100%;
+    }
+  }
+
+  &:hover{
+    .content{
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-80%);
+    }
+    .icon{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &.white{
+    color: #fff;
+    border-color: #fff;
+  }
+
+  &.solid{
+    background-color: #000;
+    color: #fff;
+    border: none;
+
+    &.white{
+      background-color: #fff;
+      color: #000;
+    }
+    
+
+    // solid--fade not OK yet
+    &--fade{
+      &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background-color: black;
+        border: inherit;
+        transition: .3s;
+        z-index: -9999;
+        
+        top: 0;
+      }
+
+      &:hover{
+        color: #000;
+        border: solid 2px #000;
+        border-radius: 5px;
+        background-color: transparent;
+        &::after{
+          top: -100%;
+        }
+
+      }
+
+    }
+  }
+
+  &.fade{
+    &::after{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      background-color: black;
+      z-index: -9999;
+      transition: .3s;
+
+      bottom: -100%;
+    }
+
+    &:hover{
+      color: #fff;
+      border: none;
+
+      &::after{
+        bottom: 0;
+      }
+
+    }
+
+  }
+}

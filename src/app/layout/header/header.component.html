@@ -1,0 +1,122 @@
+<header *ngIf="pc" class="header">
+  <nav>
+    <ul class="nav--primary">
+      <li>
+        <a href="">
+          <img
+            class="logo"
+            src="/assets/suzuki-myanmar-logo.png"
+            alt="suzuki logo"
+            srcset=""
+          />
+        </a>
+      </li>
+      <li *ngFor="let item of primaryMenu">
+        <a href="">{{ item.name }}</a>
+
+        <div *ngIf="item.child || item.model" class="megaMenu">
+          <div class="contentBox">
+            <ul *ngIf="item.child" class="childList">
+              <li *ngFor="let list of item.child">
+                <a href="">{{ list.name }}</a>
+              </li>
+            </ul>
+
+            <ul *ngIf="item.model" class="modelList">
+              <li *ngFor="let model of item.model">
+                <ul class="model">
+                  <li class="modelName">
+                    <a href="">{{ model.name }}</a>
+                  </li>
+
+                  <li *ngFor="let car of model.car" class="modelItem">
+                    <img src="{{ car.img }}" alt="" />
+                    <a href="">{{ car.name }}</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- <li *ngFor="let oneModel of item.model">
+                <div>
+                  <a href="">{{ oneModel.name }}</a>
+                  <ul *ngFor="let oneCar of oneModel.car">
+                    <li>{{ oneCar.name }}</li>
+                  </ul>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- <li><a href="">After Sales</a></li>
+      <li><a href="">Coporate</a></li> -->
+    </ul>
+
+    <ul class="nav--secondary">
+      <li>
+        <a href=""
+          >Global <img src="/assets/suzuki-global.png" alt="Global"
+        /></a>
+      </li>
+      <li class="search">
+        <input type="text" placeholder="Search" />
+        <div>
+          Search
+          <img src="/assets/suzuki-myanmar-search-icon.svg" alt="" />
+        </div>
+      </li>
+      <li><a href="">En MM</a></li>
+    </ul>
+  </nav>
+</header>
+
+<header *ngIf="!pc">
+  <div class="searchForm">
+    <input type="text" />
+  </div>
+
+  <div class="overlay">
+  </div>
+  <section class="humbergerList">
+    <figure>
+      <img
+        class="logo"
+        src="/assets/suzuki-myanmar-logo.png"
+        alt="suzuki logo"
+        srcset=""
+      />
+    </figure>
+
+    <ul>
+      <li *ngFor="let item of primaryMenu">
+        <a href="">{{ item.name }}</a>
+      </li>
+    </ul>
+  </section>
+
+  <div class="header_mb">
+    <figure>
+      <img
+        class="logo"
+        src="/assets/suzuki-myanmar-logo.png"
+        alt="suzuki logo"
+        srcset=""
+      />
+    </figure>
+
+    <ul>
+      <li class="search searchBar">
+        <img src="/assets/suzuki-myanmar-search-icon.svg" alt="search" />
+      </li>
+
+      <li class="burgerMenu">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
